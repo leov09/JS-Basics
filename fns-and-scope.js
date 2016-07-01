@@ -43,7 +43,7 @@ function welcome() {
 
 //What is the difference between arguments and parameters?
 
-  //Answer Here
+  //Answer Here - Parameters are what you specify when creating a function, arguments are what you pass when you are calling a function.
 
 
 //////////////////PROBLEM 5////////////////////
@@ -53,7 +53,7 @@ function welcome() {
 //What are all the falsy values in JavaScript and how do you check if something is falsy?
 
 
-  //Answer Here
+  //Answer Here - 0, “”, false, undefined, NaN, null; you test it out in an if statemtent using a comparison operator
 
 
 
@@ -64,15 +64,17 @@ function welcome() {
 //Create a function called myName that returns your name
 
   //Code Here
-
+function myName() {
+  return 'Leo';
+}
 
 
 //Now save the function definition of myName into a new variable called newMyName
 
   //Code Here
-
-//Now alert the result of invoking newMyName
-
+var newMyName = myName();
+// //Now alert the result of invoking newMyName
+// alert(newMyName());
 
 
 //////////////////PROBLEM 7////////////////////
@@ -82,9 +84,15 @@ function welcome() {
 //Create a function called outerFn which returns an anonymous function which returns your name.
 
   //Code Here
+function outerFn() {
+  return function() {
+    return 'Leo';
+  };
+}
 
 //Now save the result of invoking outerFn into a variable called innerFn.
 
   //Code Here
+var innerFn = outerFn();
 
 //Now invoke innerFn.
